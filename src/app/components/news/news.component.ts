@@ -49,13 +49,6 @@ export class NewsComponent implements OnInit {
     });
   }
 
-  // onChangeSource() {
-  //   this.news.getNewsByCategoryCountrySource(this.currentCountry, this.currentCategory, this.currentSource).subscribe(news => {
-  //     console.log(news);
-  //     this.newsList = news['articles'];
-  //   });
-  // }
-
 
   // SELECT SOURCE
   onChangeSource() {
@@ -64,6 +57,14 @@ export class NewsComponent implements OnInit {
       this.newsList = news['articles'];
     });
   }
+
+
+  // onChangeSource() {
+  //   this.news.getNewsByCategoryCountrySource(this.currentCountry, this.currentCategory, this.currentSource).subscribe(news => {
+  //     console.log(news);
+  //     this.newsList = news['articles'];
+  //   });
+  // }
 
 
 }
