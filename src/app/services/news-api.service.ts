@@ -16,6 +16,17 @@ export class NewsApiService {
     return this.http.get(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.api_key}`);
   }
 
+  getSourcesByCountry(country, category) {
+    return this.http.get(`https://newsapi.org/v2/sources?country=${country}&category=${category}&apiKey=${this.api_key}`);
+  }
+
+  getNewsBySource(source) {
+    return this.http.get(`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${this.api_key}`);
+  }
+
+
+
+
   // getNewsByCountryAndCategoryAndSoure(country, category, source) {
   //   var apiUrl = 'http://newsapi.org/v2/top-headlines?';
   //   var countryParam = country ? `country=${country}` : '';
@@ -27,19 +38,8 @@ export class NewsApiService {
   // }
 
 
-
-
-  getSourcesByCountry(country, category) {
-    return this.http.get(`https://newsapi.org/v2/sources?country=${country}&category=${category}&apiKey=${this.api_key}`);
-  }
-
   // getNewsByCategoryCountrySource(country, category, source) {
   //   return this.http.get(`http://newsapi.org/v2/top-headlines?sources=${source}&country=${country}&category=${category}&apiKey=${this.api_key}`);
   // }
-
-
-  getNewsBySource(source) {
-    return this.http.get(`https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${this.api_key}`);
-  }
 
 }
